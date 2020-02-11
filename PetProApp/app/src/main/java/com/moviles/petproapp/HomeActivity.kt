@@ -12,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var id: String
+    private var id: String? = ""
     private lateinit var db: FirebaseFirestore
     private lateinit var correo: String
 
@@ -27,19 +27,23 @@ class HomeActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documentReference ->
                 for (document in documentReference) {
-                    if(document.exists()){
+                    if (document.exists()) {
                         id = document.id
                     }
                 }
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Error$e",
+                    Toast.LENGTH_LONG
+                ).show()
             }
 
         db.collection("usuarios").document(id).collection("mascotas")
             .get()
             .addOnSuccessListener { documents ->
-                if(documents.isEmpty){
+                if (documents.isEmpty) {
                     startActivity(Intent(this, RegistryPetActivity::class.java))
                 }
             }
