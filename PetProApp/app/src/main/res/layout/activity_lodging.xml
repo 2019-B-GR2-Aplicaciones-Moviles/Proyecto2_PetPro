@@ -124,7 +124,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
-            android:onClick="onClickButtonPago3"
+            android:onClick="onClickButtonPago1"
             android:text="@string/button_aceptar_hospedaje"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

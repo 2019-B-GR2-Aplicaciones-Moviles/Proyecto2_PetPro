@@ -29,24 +29,76 @@ class HomeActivity : AppCompatActivity() {
     //Conjunto de funciones las cuales responden a los principales servicios
 
     fun onClickButtonPaseo(view: View) {
-        val prIntent = Intent(this, WalkActivity::class.java)
-        startActivity(prIntent)
+        db.collection("servicios").whereEqualTo("idUsuario", id)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    val prIntent = Intent(this, WalkActivity::class.java)
+                    prIntent.putExtra("id", id)
+                    startActivity(prIntent)
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Usted ya tiene un servicio contratado, espere a finalizarlo",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
     }
 
 
     fun onClickButtonBaño(view: View) {
-        val prIntent = Intent(this, BathActivity::class.java)
-        startActivity(prIntent)
+        db.collection("servicios").whereEqualTo("idUsuario", id)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    val prIntent = Intent(this, BathActivity::class.java)
+                    prIntent.putExtra("id", id)
+                    startActivity(prIntent)
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Usted ya tiene un servicio contratado, espere a finalizarlo",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
     }
 
     fun onClickButtonHospedaje(view: View) {
-        val prIntent = Intent(this, LodgingActivity::class.java)
-        startActivity(prIntent)
+        db.collection("servicios").whereEqualTo("idUsuario", id)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    val prIntent = Intent(this, LodgingActivity::class.java)
+                    prIntent.putExtra("id", id)
+                    startActivity(prIntent)
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Usted ya tiene un servicio contratado, espere a finalizarlo",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
     }
 
     fun onClickButtonPeluqueria(view: View) {
-        val prIntent = Intent(this, HairActivity::class.java)
-        startActivity(prIntent)
+        db.collection("servicios").whereEqualTo("idUsuario", id)
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    val prIntent = Intent(this, HairActivity::class.java)
+                    prIntent.putExtra("id", id)
+                    startActivity(prIntent)
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Usted ya tiene un servicio contratado, espere a finalizarlo",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
     }
 
     fun onClickButtonPerfilUser(view: View) {
