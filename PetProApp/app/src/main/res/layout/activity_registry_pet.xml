@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".RegistryPetActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".RegistryPetActivity">
 
 
     <Toolbar
@@ -62,35 +62,33 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButtonPerro"
+        <RadioGroup
+            android:id="@+id/radioGroupEspecie"
             android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="84dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/radio_button_perro"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewEspecie"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
             app:layout_constraintStart_toEndOf="@+id/textViewEspecie"
-            app:layout_constraintTop_toTopOf="@+id/textViewEspecie" />
+            app:layout_constraintTop_toTopOf="@+id/textViewEspecie">
 
-        <RadioButton
-            android:id="@+id/radioButtonGato"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/radio_button_gato"
-            app:layout_constraintEnd_toEndOf="@+id/radioButtonPerro"
-            app:layout_constraintStart_toStartOf="@+id/radioButtonPerro"
-            app:layout_constraintTop_toBottomOf="@+id/radioButtonPerro" />
+            <RadioButton
+                android:id="@+id/radioButtonPerro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_button_perro" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_button_gato" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/editTextNombreMascota"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:hint="@string/edit_text_nombre_mascota"
@@ -98,7 +96,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButtonGato" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEspecie" />
 
         <EditText
             android:id="@+id/editTextEdadMascota"
@@ -107,7 +105,7 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="@string/edit_text_edad_mascota"
-            android:inputType="number|textPersonName"
+            android:inputType="number"
             app:layout_constraintEnd_toEndOf="@+id/editTextNombreMascota"
             app:layout_constraintStart_toStartOf="@+id/editTextNombreMascota"
             app:layout_constraintTop_toBottomOf="@+id/editTextNombreMascota" />
