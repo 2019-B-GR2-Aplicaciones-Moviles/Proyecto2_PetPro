@@ -42,7 +42,9 @@
             android:layout_width="0dp"
             android:layout_height="165dp"
             android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewInfoBaño"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bathe1" />
@@ -52,101 +54,79 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
             android:text="@string/text_view_info_baño"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroupBaths"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewBaño" />
 
-        <CheckBox
-            android:id="@+id/checkBoxBañoBasico"
+        <RadioGroup
+            android:id="@+id/radioGroupBaths"
             android:layout_width="0dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_basico"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAceptarBaño"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBaño" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBaño">
 
-        <TextView
-            android:id="@+id/textViewInfoBañoBasico"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_basico"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoBasico" />
+            <RadioButton
+                android:id="@+id/radioButtonBañoBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_baño_basico" />
 
-        <CheckBox
-            android:id="@+id/checkBoxBañoCompleto"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_completo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBañoBasico" />
+            <TextView
+                android:id="@+id/textViewInfoBañoBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_baño_basico"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewInfoBañoCompleto"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_completo"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoCompleto" />
+            <RadioButton
+                android:id="@+id/radioButtonBañoCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_baño_completo" />
 
-        <CheckBox
-            android:id="@+id/checkBoxBañoPremium"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_premium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBañoCompleto" />
+            <TextView
+                android:id="@+id/textViewInfoBañoCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_baño_completo"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewInfoBañoPremium"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_premium"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoPremium" />
+            <RadioButton
+                android:id="@+id/radioButtonBañoPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_baño_premium" />
+
+            <TextView
+                android:id="@+id/textViewInfoBañoPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_baño_premium"
+                android:textAlignment="center" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/buttonAceptarBaño"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
             android:text="@string/button_aceptar_baño"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupBaths" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

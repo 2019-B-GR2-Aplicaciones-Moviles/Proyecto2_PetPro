@@ -41,7 +41,9 @@
             android:layout_width="0dp"
             android:layout_height="165dp"
             android:layout_marginTop="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewInfoHospedaje"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/loading" />
@@ -54,99 +56,81 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:text="@string/text_view_info_hospedaje"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroupLodging"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewHospedaje" />
 
-        <CheckBox
-            android:id="@+id/checkBoxHospedajeBasico"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_hospedaje_basico"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoHospedaje" />
+        <RadioGroup
+            android:id="@+id/radioGroupLodging"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAceptarHospedaje"
+            app:layout_constraintEnd_toEndOf="@+id/textViewInfoHospedaje"
+            app:layout_constraintStart_toStartOf="@+id/textViewInfoHospedaje"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoHospedaje">
 
-        <TextView
-            android:id="@+id/textViewHospedajeBasico"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_hospedaje_basico"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajeBasico" />
+            <RadioButton
+                android:id="@+id/radioButtonHospedajeBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_hospedaje_basico" />
 
-        <CheckBox
-            android:id="@+id/checkBoxHospedajeCompleto"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_hospedaje_completo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewHospedajeBasico" />
+            <TextView
+                android:id="@+id/textViewHospedajeBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/text_view_hospedaje_basico"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewHospedajeCompleto"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_hospedaje_completo"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajeCompleto" />
+            <RadioButton
+                android:id="@+id/radioButtonHospedajeCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_hospedaje_completo" />
 
-        <CheckBox
-            android:id="@+id/checkBoxHospedajePremium"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_hospedaje_premium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewHospedajeCompleto" />
+            <TextView
+                android:id="@+id/textViewHospedajeCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/text_view_hospedaje_completo"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewHospedajePremium"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_hospedaje_premium"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.479"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajePremium" />
+            <RadioButton
+                android:id="@+id/radioButtonHospedajePremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_hospedaje_premium" />
+
+            <TextView
+                android:id="@+id/textViewHospedajePremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/text_view_hospedaje_premium"
+                android:textAlignment="center" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/buttonAceptarHospedaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
             android:onClick="onClickButtonPago3"
             android:text="@string/button_aceptar_hospedaje"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupLodging" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,7 +41,9 @@
             android:layout_width="0dp"
             android:layout_height="165dp"
             android:layout_marginTop="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewInfoPeluqueria"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/pedicure" />
@@ -51,103 +53,78 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:text="@string/text_view_info_peluqueria"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroupHair"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewPeluquería" />
 
-        <CheckBox
-            android:id="@+id/checkBoxPeluqueriaBasico"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_servicio_basico"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoPeluqueria" />
+        <RadioGroup
+            android:id="@+id/radioGroupHair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/buttonChooseAceptarPeluqueria"
+            app:layout_constraintEnd_toEndOf="@+id/textViewInfoPeluqueria"
+            app:layout_constraintStart_toStartOf="@+id/textViewInfoPeluqueria"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoPeluqueria">
 
-        <TextView
-            android:id="@+id/textViewPeluqueriaBasico"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_servicio_basico"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxPeluqueriaBasico" />
+            <RadioButton
+                android:id="@+id/radioButtonPeluqueriaBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_servicio_basico" />
 
-        <CheckBox
-            android:id="@+id/checkBoxPeluqueriaCompleto"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_servicio_completo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPeluqueriaBasico" />
+            <TextView
+                android:id="@+id/textViewPeluqueriaBasico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_servicio_basico"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewPeluqueriaCompleto"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_servicio_completo"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxPeluqueriaCompleto" />
+            <RadioButton
+                android:id="@+id/radioButtonPeluqueriaCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_servicio_completo" />
 
-        <CheckBox
-            android:id="@+id/checkBoxPeluqueriaPremium"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/check_box_servicio_premium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.486"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPeluqueriaCompleto" />
+            <TextView
+                android:id="@+id/textViewPeluqueriaCompleto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_servicio_completo"
+                android:textAlignment="center" />
 
-        <TextView
-            android:id="@+id/textViewPeluqueriaPremium"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_servicio_premium"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxPeluqueriaPremium" />
+            <RadioButton
+                android:id="@+id/radioButtonPeluqueriaPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_box_servicio_premium" />
+
+            <TextView
+                android:id="@+id/textViewPeluqueriaPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_servicio_premium"
+                android:textAlignment="center" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/buttonChooseAceptarPeluqueria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
-            android:onClick="onClickButtonPago"
+            android:onClick="onClickButtonPago2"
             android:text="@string/button_aceptar_peluqueria"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupHair" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

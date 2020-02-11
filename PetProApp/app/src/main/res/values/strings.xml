@@ -25,10 +25,10 @@
     <string name="walk_tittle">Paseos</string>
     <string name="text_view_info_paseo">Nuestro servicio para pasear perros ofrece nuestro mayor cuidado
         y compromiso con varios paquetes promocionales</string>
-    <string name="check_box_30_minutos">30 Minutos</string>
-    <string name="check_box_1_hora">1 Hora</string>
-    <string name="check_box_1_30_horas">1:30 Horas</string>
-    <string name="check_box_2_horas">2 Horas</string>
+    <string name="check_box_30_minutos">30 Minutos ($3)</string>
+    <string name="check_box_1_hora">1 Hora ($5)</string>
+    <string name="check_box_1_30_horas">1:30 Horas ($7)</string>
+    <string name="check_box_2_horas">2 Horas ($9)</string>
     <string name="text_view_paseo_30_min">$3</string>
     <string name="text_view_paseo_1_hora">$5</string>
     <string name="text_view_paseo_media_hora">$7</string>
