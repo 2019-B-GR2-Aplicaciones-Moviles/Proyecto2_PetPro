@@ -12,7 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeActivity : AppCompatActivity() {
 
-    private var id: String? = ""
+    private var id: String = ""
     private lateinit var db: FirebaseFirestore
     private lateinit var correo: String
 
@@ -23,30 +23,7 @@ class HomeActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         correo = intent.getStringExtra("user")
 
-        db.collection("usuarios").whereEqualTo("email", correo)
-            .get()
-            .addOnSuccessListener { documentReference ->
-                for (document in documentReference) {
-                    if (document.exists()) {
-                        id = document.id
-                    }
-                }
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(
-                    this,
-                    "Error$e",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-
-        db.collection("usuarios").document(id).collection("mascotas")
-            .get()
-            .addOnSuccessListener { documents ->
-                if (documents.isEmpty) {
-                    startActivity(Intent(this, RegistryPetActivity::class.java))
-                }
-            }
+        consultarIDUsuario()
     }
 
 
@@ -78,5 +55,34 @@ class HomeActivity : AppCompatActivity() {
         startActivity(prIntent)
     }
 
+    private fun consultarIDUsuario(){
+        db.collection("usuarios").whereEqualTo("email", correo)
+            .get()
+            .addOnSuccessListener { documentReference ->
+                for (document in documentReference) {
+                    if (document.exists()) {
+                        id = document.id
+                        consultarMascotas(id)
+                    }
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    this,
+                    "Error$e",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+    }
+
+    private fun consultarMascotas(idUser:String){
+        db.collection("usuarios").document(idUser).collection("mascotas")
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    startActivity(Intent(this, RegistryPetActivity::class.java))
+                }
+            }
+    }
 }
 
