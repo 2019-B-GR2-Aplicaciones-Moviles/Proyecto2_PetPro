@@ -7,8 +7,10 @@ import android.view.View
 import android.widget.TextView
 
 class VerifyActivity : AppCompatActivity() {
+
     private lateinit var correo: TextView
     private lateinit var email: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify)

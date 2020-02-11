@@ -28,7 +28,6 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/background_dark" />
 
-
         </LinearLayout>
     </Toolbar>
 
@@ -83,6 +82,7 @@
             android:layout_marginBottom="84dp"
             android:onClick="onClickButtonFinRegistro"
             android:text="@string/button_fin_registro"
+            android:background="@color/colorPrimaryDark"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textViewMensajeConf2"
             app:layout_constraintHorizontal_bias="0.498"

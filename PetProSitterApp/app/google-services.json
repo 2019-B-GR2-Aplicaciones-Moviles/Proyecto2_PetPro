@@ -60,6 +60,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "295438756282-2mdivc8nmh3pnc9e0svo4oi5jcuqkl3o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vizuete.petprositterapp",
+            "certificate_hash": "0a3373b06a76c30806fcbe17742a429837f4811f"
+          }
+        },
+        {
           "client_id": "295438756282-hb7eb4eth35olof1r4uv084sodg60e69.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

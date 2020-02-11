@@ -14,14 +14,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
-
     // declaracion de variables 
     private lateinit var nombreUsuario: EditText
     private lateinit var passwordUsuario: EditText
     private lateinit var usuario: String
     private lateinit var password: String
     private lateinit var auth: FirebaseAuth
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
     }
-
 
     fun onClickLogin(view: View) {
 
