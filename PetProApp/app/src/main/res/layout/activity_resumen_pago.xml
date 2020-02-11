@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resumenPagoActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <Toolbar
+        android:id="@+id/toolbarPagoEfectivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resumen_pago_tittle"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText" />
+
+
+        </LinearLayout>
+    </Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/efectivojpg">
+
+
+        <TextView
+            android:id="@+id/textViewServicioContrarto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/text_view_servicio_contratado"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewValorPagar"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/text_view_valor_pagar"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewServicioContratado" />
+
+        <TextView
+            android:id="@+id/textViewTotal"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewValorPagar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textViewValorPagar"
+            app:layout_constraintTop_toTopOf="@+id/textViewValorPagar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonAceptarPagoEfectivo"
+            android:layout_width="130dp"
+            android:layout_height="67dp"
+            android:layout_marginBottom="64dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_aceptar_pago_efectivo"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewServicioContratado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="32dp"
+            android:shadowColor="@color/colorSecondary"
+            android:textColor="@color/colorSecondary"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewServicioContrarto" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
