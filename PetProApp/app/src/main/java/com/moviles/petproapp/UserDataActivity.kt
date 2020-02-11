@@ -30,10 +30,10 @@ class UserDataActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 
-        nombreUsuario = findViewById(R.id.textViewNombreConsulta)
-        apellidoUsuario = findViewById(R.id.textViewApellidoConsulta)
-        correoUsuario = findViewById(R.id.textViewCorreoConsulta)
-        telefonoUsuario = findViewById(R.id.textViewTelefonoConsulta)
+        nombreUsuario = findViewById(R.id.editTextNombreConsulta)
+        apellidoUsuario = findViewById(R.id.editTextApellidoConsulta)
+        correoUsuario = findViewById(R.id.editTextCorreoConsulta)
+        telefonoUsuario = findViewById(R.id.editTextTelefonoConsulta)
 
         db.collection("usuarios").document(id)
             .get()
