@@ -14,6 +14,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
+
+    // declaracion de variables 
     private lateinit var nombreUsuario: EditText
     private lateinit var passwordUsuario: EditText
     private lateinit var usuario: String
