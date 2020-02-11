@@ -17,7 +17,7 @@ class RegistryPetActivity : AppCompatActivity() {
     private lateinit var edadMascota: EditText
     private lateinit var descripcionMascota: EditText
     private lateinit var radioGroupEspecie: RadioGroup
-    private lateinit var radioButtonEspecie: RadioButton
+    private var radioButtonEspecie: RadioButton = TODO()
     private var selectId: Int = 0
     private lateinit var nombre: String
     private var edad: Int = 0
