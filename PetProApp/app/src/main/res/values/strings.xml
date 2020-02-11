@@ -84,5 +84,20 @@
     <string name="button_tarjeta">Tarjeta</string>
     <string name="button_efectivo">Efectivo</string>
     <string name="pago_efectivo_tittle">Pago en Efectivo</string>
+    <string name="text_view_servicio_contratado">Servicio contratado:</string>
+    <string name="text_view_valor_pagar">Valor a pagar:</string>
+    <string name="button_aceptar_pago_efectivo">Aceptar</string>
+    <string name="pago_tarjeta_tittle">Pago con Tarjeta</string>
+    <string name="text_view_numero_tarjeta">Número de tarjeta:</string>
+    <string name="edit_text_numero_tarjeta">Numero de tarjeta sin espacios ni guiones</string>
+    <string name="text_view_fecha_caducidad">Fecha de caducidad:</string>
+    <string name="edit_text_fecha_caducidad">MM/AA</string>
+    <string name="text_view_titular_tarjeta">Titular de la tarjeta:</string>
+    <string name="edit_text_titular_tarjeta">Nombre tal y como aparece en la tarjeta</string>
+    <string name="text_view_cvv">Código de Seguridad (CVV):</string>
+    <string name="edit_text_cvv"></string>
+
+
+
 </resources>
 

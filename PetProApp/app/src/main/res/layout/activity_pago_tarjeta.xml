@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary">
 
     <Toolbar
-        android:id="@+id/toolbarVerify"
+        android:id="@+id/toolbarPagoTarjeta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pago con tarjeta"
+                android:text="@string/pago_tarjeta_tittle"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorText" />
 
@@ -36,152 +36,141 @@
         android:layout_height="match_parent"
         android:background="@drawable/efectivojpg">
 
-    <EditText
-        android:id="@+id/editTextCVV"
-        android:layout_width="360dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTitularTarjeta"
-        app:layout_constraintStart_toStartOf="@+id/editTextTitularTarjeta"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
-
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:text="Código de Seguridad (CVV):"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTitularTarjeta"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitularTarjeta"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTitularTarjeta" />
-
-    <EditText
-        android:id="@+id/editTextTitularTarjeta"
-        android:layout_width="360dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Nombre tal y como aparece en la tarjeta"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextFechaCaduca"
-        app:layout_constraintStart_toStartOf="@+id/editTextFechaCaduca"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitularTarjeta" />
-
-    <EditText
-        android:id="@+id/editTextFechaCaduca"
-        android:layout_width="360dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="MM/AA"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumeroTarjeta"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumeroTarjeta"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFechaCaduca" />
-
-    <TextView
-        android:id="@+id/textViewFechaCaduca"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:text="Fecha de caducidad:"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
-
-    <TextView
-        android:id="@+id/textViewTitularTarjeta"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:text="Titular de la tarjeta:"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewFechaCaduca"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewFechaCaduca"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFechaCaduca" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="318dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="Número de tarjeta:"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="318dp"
+            android:id="@+id/textViewDatosPago"
+            android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
             android:text="Datos de pago:"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView9"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-        android:id="@+id/textView9"
-        android:layout_width="182dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="64dp"
-        android:text="Valor a pagar:"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textViewNumeroTarjeta"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_numero_tarjeta"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDatosPago" />
 
-    <EditText
-        android:id="@+id/editTextTotal"
-        android:layout_width="81dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="80dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="$   3"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView9"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/editTextNumeroTarjeta"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:hint="@string/edit_text_numero_tarjeta"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumeroTarjeta" />
 
-    <EditText
-        android:id="@+id/editTextNumeroTarjeta"
-        android:layout_width="360dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Numero de tarjeta sin espacios ni guiones"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/textView11"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        <TextView
+            android:id="@+id/textViewFechaCaduca"
+            android:layout_width="0dp"
+            android:layout_height="42"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_fecha_caducidad"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumeroTarjeta" />
 
-    <Button
-        android:id="@+id/buttonAceptarPagoTarjeta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:background="@android:color/holo_blue_light"
-        android:text="Aceptar "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/editTextFechaCaduca"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:hint="@string/edit_text_fecha_caducidad"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFechaCaduca" />
+
+        <TextView
+            android:id="@+id/textViewTitularTarjeta"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_titular_tarjeta"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFechaCaduca" />
+
+        <EditText
+            android:id="@+id/editTextTitularTarjeta"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:hint="@string/edit_text_titular_tarjeta"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitularTarjeta" />
+
+        <TextView
+            android:id="@+id/textViewCVV"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_cvv"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTitularTarjeta" />
+
+        <EditText
+            android:id="@+id/editTextCVV"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/text_view_cvv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCVV" />
+
+        <Button
+            android:id="@+id/buttonAceptarPagoTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Aceptar "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
