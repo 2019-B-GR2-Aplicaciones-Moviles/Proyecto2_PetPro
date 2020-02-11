@@ -27,6 +27,7 @@ class LodgingActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 
+        radioGroupValores = findViewById(R.id.radioGroupLodging)
         radioButtonCuota1 = findViewById(R.id.radioButtonHospedajeBasico)
         radioButtonCuota2 = findViewById(R.id.radioButtonHospedajeCompleto)
         radioButtonCuota3 = findViewById(R.id.radioButtonHospedajePremium)

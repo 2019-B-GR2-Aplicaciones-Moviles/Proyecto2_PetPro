@@ -28,6 +28,7 @@ class WalkActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 
+        radioGroupValores = findViewById(R.id.radioGroupWalks)
         radioButtonCuota1 = findViewById(R.id.radioButton30Minutos)
         radioButtonCuota2 = findViewById(R.id.radioButton1Hora)
         radioButtonCuota3 = findViewById(R.id.radioButton1MediaHora)

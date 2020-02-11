@@ -27,6 +27,7 @@ class BathActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 
+        radioGroupValores = findViewById(R.id.radioGroupBaths)
         radioButtonCuota1 = findViewById(R.id.radioButtonBañoBasico)
         radioButtonCuota2 = findViewById(R.id.radioButtonBañoCompleto)
         radioButtonCuota3 = findViewById(R.id.radioButtonBañoPremium)

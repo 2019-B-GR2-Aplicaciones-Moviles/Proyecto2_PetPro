@@ -27,6 +27,7 @@ class HairActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 
+        radioGroupValores = findViewById(R.id.radioGroupHair)
         radioButtonCuota1 = findViewById(R.id.radioButtonPeluqueriaBasico)
         radioButtonCuota2 = findViewById(R.id.radioButtonPeluqueriaCompleto)
         radioButtonCuota3 = findViewById(R.id.radioButtonPeluqueriaPremium)
