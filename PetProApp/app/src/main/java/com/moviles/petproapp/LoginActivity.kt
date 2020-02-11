@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordUsuario: EditText
     private lateinit var usuario: String
     private lateinit var password: String
-    private lateinit var id: String
+    private var id: String=""
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
 

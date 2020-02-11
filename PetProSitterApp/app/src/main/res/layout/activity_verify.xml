@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/verify_tittle"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/background_dark" />
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
     </Toolbar>
@@ -80,9 +80,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="84dp"
+            android:background="@color/colorPrimaryDark"
             android:onClick="onClickButtonFinRegistro"
             android:text="@string/button_fin_registro"
-            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textViewMensajeConf2"
             app:layout_constraintHorizontal_bias="0.498"

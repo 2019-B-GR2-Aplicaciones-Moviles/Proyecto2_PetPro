@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/registry_tittle"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorText" />
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
 
@@ -158,7 +158,7 @@
             android:background="@color/colorPrimaryDark"
             android:onClick="onClickRegistrarUsuario"
             android:text="@string/button_continuarReg"
-            android:textColor="@color/colorText"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/editTextBankAccount"
             app:layout_constraintHorizontal_bias="0.5"
