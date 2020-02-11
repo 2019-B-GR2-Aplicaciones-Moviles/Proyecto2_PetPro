@@ -71,12 +71,10 @@ class HomeActivity : AppCompatActivity() {
         db.collection("usuarios").document(idUser).collection("mascotas")
             .get()
             .addOnSuccessListener { documents ->
-                for (document in documents){
-                    if(!document.exists()){
-                        val intentRegistryPet = Intent(this, RegistryPetActivity::class.java)
-                        intentRegistryPet.putExtra("id", idUser)
-                        startActivity(intentRegistryPet)
-                    }
+                if (documents.isEmpty) {
+                    val intentRegistryPet = Intent(this, RegistryPetActivity::class.java)
+                    intentRegistryPet.putExtra("id", idUser)
+                    startActivity(intentRegistryPet)
                 }
             }
     }
