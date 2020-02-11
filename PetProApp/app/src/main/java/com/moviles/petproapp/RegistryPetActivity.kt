@@ -36,11 +36,6 @@ class RegistryPetActivity : AppCompatActivity() {
         radioGroupEspecie = findViewById(R.id.radioGroupEspecie)
         radioButtonPerro = findViewById(R.id.radioButtonPerro)
         radioButtonGato = findViewById(R.id.radioButtonGato)
-        if(radioButtonGato.isChecked){
-            especie = radioButtonGato.text.toString()
-        } else if (radioButtonPerro.isChecked){
-            especie = radioButtonPerro.text.toString()
-        }
         nombreMascota = findViewById(R.id.editTextNombreMascota)
         edadMascota = findViewById(R.id.editTextEdadMascota)
         descripcionMascota = findViewById(R.id.editTextDescripcionMascota)
@@ -54,7 +49,11 @@ class RegistryPetActivity : AppCompatActivity() {
         nombre = nombreMascota.text.toString()
         edad = edadMascota.text.toString().toInt()
         descripcion = descripcionMascota.text.toString()
-
+        if(radioButtonGato.isChecked){
+            especie = radioButtonGato.text.toString()
+        } else if (radioButtonPerro.isChecked){
+            especie = radioButtonPerro.text.toString()
+        }
 
         when {
             nombre.isEmpty() -> {
