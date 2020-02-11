@@ -26,7 +26,6 @@ class UserDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_data)
 
-
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
 

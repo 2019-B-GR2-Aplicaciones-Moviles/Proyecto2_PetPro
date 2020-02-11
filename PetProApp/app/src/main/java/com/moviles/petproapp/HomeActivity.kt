@@ -47,12 +47,12 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonPeluqueria(view: View) {
         val prIntent = Intent(this, HairActivity::class.java)
-        prIntent.putExtra("id",id)
         startActivity(prIntent)
     }
 
     fun onClickButtonPerfilUser(view: View) {
         val prIntent = Intent(this, UserDataActivity::class.java)
+        prIntent.putExtra("id",id)
         startActivity(prIntent)
     }
 
