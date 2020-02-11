@@ -89,6 +89,7 @@ class RegistryPetActivity : AppCompatActivity() {
             .addOnSuccessListener { documentReference ->
                 // Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
                 val prIntent = Intent(this, HomeActivity::class.java)
+                prIntent.putExtra("id",id)
                 startActivity(prIntent)
                 finish()
             }

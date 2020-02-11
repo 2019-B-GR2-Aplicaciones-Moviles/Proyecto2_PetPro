@@ -21,9 +21,9 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         db = FirebaseFirestore.getInstance()
-        correo = intent.getStringExtra("user")
+        id = intent.getStringExtra("id")
 
-        consultarIDUsuario()
+        consultarMascotas(id)
     }
 
 
@@ -66,26 +66,6 @@ class HomeActivity : AppCompatActivity() {
         val prIntent = Intent(this, RegistryPetActivity::class.java)
         prIntent.putExtra("id",id)
         startActivity(prIntent)
-    }
-
-    private fun consultarIDUsuario(){
-        db.collection("usuarios").whereEqualTo("email", correo)
-            .get()
-            .addOnSuccessListener { documentReference ->
-                for (document in documentReference) {
-                    if (document.exists()) {
-                        id = document.id
-                        consultarMascotas(id)
-                    }
-                }
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(
-                    this,
-                    "Error$e",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
     }
 
     private fun consultarMascotas(idUser:String){

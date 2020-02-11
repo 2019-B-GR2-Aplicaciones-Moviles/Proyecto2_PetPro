@@ -19,7 +19,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordUsuario: EditText
     private lateinit var usuario: String
     private lateinit var password: String
+    private lateinit var id: String
     private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
         nombreUsuario = findViewById(R.id.editTextUserLogin)
         passwordUsuario = findViewById(R.id.editTextPwLogin)
 
+        db = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
     }
 
@@ -63,8 +66,9 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful){
                     var user = auth.currentUser
                     if (user!!.isEmailVerified){
+                        consultarIDUsuario()
                         val intentHome = Intent(this,HomeActivity::class.java)
-                        intentHome.putExtra("user",usuario)
+                        intentHome.putExtra("id",id)
                         startActivity(intentHome)
                         finish()
                     }else{
@@ -74,6 +78,25 @@ class LoginActivity : AppCompatActivity() {
                 }else{
                     Toast.makeText(this, "El usuario o contraseña son incorrectas", Toast.LENGTH_LONG).show()
                 }
+            }
+    }
+
+    private fun consultarIDUsuario(){
+        db.collection("usuarios").whereEqualTo("email", usuario)
+            .get()
+            .addOnSuccessListener { documentReference ->
+                for (document in documentReference) {
+                    if (document.exists()) {
+                        id = document.id
+                    }
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    this,
+                    "Error$e",
+                    Toast.LENGTH_LONG
+                ).show()
             }
     }
 }

@@ -39,6 +39,7 @@ class UserDataActivity : AppCompatActivity() {
 
     fun onClickButtonAceptarConsulta(view: View) {
         val prIntent = Intent(this, HomeActivity::class.java)
+        prIntent.putExtra("id", id)
         startActivity(prIntent)
     }
 
