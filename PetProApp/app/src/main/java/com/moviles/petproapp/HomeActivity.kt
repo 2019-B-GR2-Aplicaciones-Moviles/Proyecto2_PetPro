@@ -52,6 +52,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonPerfilUser(view: View) {
         val prIntent = Intent(this, UserDataActivity::class.java)
+
         startActivity(prIntent)
     }
 
