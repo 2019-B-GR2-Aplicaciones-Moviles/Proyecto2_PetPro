@@ -6,12 +6,11 @@ import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 
-
 class ServicesActivity : AppCompatActivity() {
 
     private lateinit var listaServicios: ListView
     private lateinit var db: FirebaseFirestore
-    private lateinit var service: Services
+    private var service: Services = Services()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
