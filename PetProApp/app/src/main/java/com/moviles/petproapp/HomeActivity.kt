@@ -52,7 +52,18 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonPerfilUser(view: View) {
         val prIntent = Intent(this, UserDataActivity::class.java)
+        startActivity(prIntent)
+    }
 
+    fun onClickButtonRegistryCard(view: View) {
+        val prIntent = Intent(this, pagoTarjetaActivity::class.java)
+        prIntent.putExtra("id",id)
+        startActivity(prIntent)
+    }
+
+    fun onClickButtonRegistryPet(view: View) {
+        val prIntent = Intent(this, RegistryPetActivity::class.java)
+        prIntent.putExtra("id",id)
         startActivity(prIntent)
     }
 
