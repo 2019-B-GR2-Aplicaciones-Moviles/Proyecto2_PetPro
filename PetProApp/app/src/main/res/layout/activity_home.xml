@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <Toolbar
+        android:id="@+id/toolbarVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_tittle"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText" />
+
+
+        </LinearLayout>
+    </Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/buttonPaseo"
+            android:layout_width="176dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/take"
+            android:onClick="onClickButtonPaseo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonBaño"
+            android:layout_width="176dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bathe1"
+            android:onClick="onClickButtonBaño"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonPaseo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/buttonPaseo"
+            app:layout_constraintTop_toTopOf="@+id/buttonPaseo"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonHospedaje"
+            android:layout_width="179dp"
+            android:layout_height="182dp"
+            android:layout_marginTop="112dp"
+            android:background="@drawable/loading"
+            android:onClick="onClickButtonHospedaje"
+            app:layout_constraintEnd_toEndOf="@+id/buttonPaseo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/buttonPaseo"
+            app:layout_constraintTop_toBottomOf="@+id/buttonPaseo" />
+
+        <Button
+            android:id="@+id/buttonPeluqueria"
+            android:layout_width="161dp"
+            android:layout_height="176dp"
+            android:background="@drawable/pedicure"
+            android:onClick="onClickButtonPeluqueria"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonHospedaje"
+            app:layout_constraintEnd_toEndOf="@+id/buttonBaño"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/buttonBaño"
+            app:layout_constraintTop_toTopOf="@+id/buttonHospedaje" />
+
+        <TextView
+            android:id="@+id/textViewPaseo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/text_view_paseo"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonPaseo"
+            app:layout_constraintEnd_toEndOf="@+id/buttonPaseo"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="@+id/buttonPaseo" />
+
+        <TextView
+            android:id="@+id/textViewBaño"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/text_view_baño"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonBaño"
+            app:layout_constraintEnd_toEndOf="@+id/buttonBaño"
+            app:layout_constraintStart_toStartOf="@+id/buttonBaño" />
+
+        <TextView
+            android:id="@+id/textViewHospedaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/text_view_hospedaje"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonHospedaje"
+            app:layout_constraintEnd_toEndOf="@+id/buttonHospedaje"
+            app:layout_constraintStart_toStartOf="@+id/buttonHospedaje"
+            app:layout_constraintTop_toTopOf="@+id/textViewPeluqueria" />
+
+        <TextView
+            android:id="@+id/textViewPeluqueria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/text_view_peluqueria"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonPeluqueria"
+            app:layout_constraintEnd_toEndOf="@+id/buttonPeluqueria"
+            app:layout_constraintStart_toStartOf="@+id/buttonPeluqueria" />
+
+        <ImageButton
+            android:id="@+id/imageButtonPerfilUser"
+            android:layout_width="84dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="onClickButtonPerfilUser"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/user4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

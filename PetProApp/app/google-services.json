@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "295438756282",
+    "firebase_url": "https://petproapp.firebaseio.com",
+    "project_id": "petproapp",
+    "storage_bucket": "petproapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295438756282:android:2273617dbded6809cc9583",
+        "android_client_info": {
+          "package_name": "com.moviles.petproapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295438756282-fbtgl9gr5ioa228v76b5260so995g1m3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moviles.petproapp",
+            "certificate_hash": "0a3373b06a76c30806fcbe17742a429837f4811f"
+          }
+        },
+        {
+          "client_id": "295438756282-2itspt82q9f8aekrj0f94av583i96sf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiqL7t_kSdgqqD7FHH_KtuPR8H-PbfIjU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295438756282-2itspt82q9f8aekrj0f94av583i96sf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

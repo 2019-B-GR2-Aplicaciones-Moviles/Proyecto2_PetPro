@@ -1,3 +1,85 @@
 <resources>
     <string name="app_name">PetProApp</string>
+    <string name="registry_tittle">Registro</string>
+    <string name="edit_text_nombre">Nombre*</string>
+    <string name="edit_text_apellido">Apellido*</string>
+    <string name="edit_text_email">Correo electrónico*</string>
+    <string name="edit_text_telefono">Teléfono*</string>
+    <string name="edit_text_contraseña">Contraseña*</string>
+    <string name="edit_text_confirmaPw">Confirmación contraseña*</string>
+    <string name="button_continuarReg">Continuar</string>
+    <string name="text_view_campos_obligatorios">*Campo Requerido</string>
+    <string name="text_view_usuario">Email*</string>
+    <string name="button_inicio_sesion_login">Iniciar sesión</string>
+    <string name="text_view_mensaje">Si no tienes cuenta, registrate</string>
+    <string name="button_registrar_login">Registrar</string>
+    <string name="verify_tittle">Verificar Cuenta</string>
+    <string name="text_view_mensaje_confirmacion">Se ha enviado un mensaje al correo:</string>
+    <string name="text_view_mensaje_confirmacion2">Por favor revise su correo electrónico para verificar su cuenta</string>
+    <string name="button_fin_registro">Finalizar</string>
+    <string name="home_tittle">Servicios</string>
+    <string name="text_view_paseo">Paseos</string>
+    <string name="text_view_baño">Baños</string>
+    <string name="text_view_hospedaje">Hospedaje</string>
+    <string name="text_view_peluqueria">Peluquería</string>
+    <string name="walk_tittle">Paseos</string>
+    <string name="text_view_info_paseo">Nuestro servicio para pasear perros ofrece nuestro mayor cuidado
+        y compromiso con varios paquetes promocionales</string>
+    <string name="check_box_30_minutos">30 Minutos</string>
+    <string name="check_box_1_hora">1 Hora</string>
+    <string name="check_box_1_30_horas">1:30 Horas</string>
+    <string name="check_box_2_horas">2 Horas</string>
+    <string name="text_view_paseo_30_min">$3</string>
+    <string name="text_view_paseo_1_hora">$5</string>
+    <string name="text_view_paseo_media_hora">$7</string>
+    <string name="text_view_paseo_2_horas">$9</string>
+    <string name="button_aceptar_paseo">Aceptar</string>
+    <string name="bath_tittle">Baños</string>
+    <string name="text_view_info_baño"> Nuestro Servicio de Bañar a tu  perro ofrece varias kits con nuestro mejores productos</string>
+    <string name="check_box_baño_basico">Baño Básico</string>
+    <string name="check_box_baño_completo">Baño Completo</string>
+    <string name="check_box_baño_premium">Baño Premium</string>
+    <string name="text_view_baño_basico">Shampoo + Acondicionador - $12</string>
+    <string name="text_view_baño_completo">Shampoo + Acondicionador + Arreglo a tijera de patas - $18</string>
+    <string name="text_view_baño_premium">Shampoo + Acondicionador + Arreglo a tijera de patas + Peinado - $25</string>
+    <string name="button_aceptar_baño">Aceptar</string>
+    <string name="lodging_tittle">Hospedaje</string>
+    <string name="text_view_info_hospedaje">Nuestro servicio de cuidado ofrece a su perro nuestro mejor cuidado y atención a los demás de
+        nuestra excelente comida.</string>
+    <string name="check_box_hospedaje_basico">Cuidado Básico</string>
+    <string name="check_box_hospedaje_completo">Cuidado Completo</string>
+    <string name="check_box_hospedaje_premium">Cuidado Premium</string>
+    <string name="text_view_hospedaje_basico">Hospedaje - $15</string>
+    <string name="text_view_hospedaje_completo">Hospedaje + Comida - $20</string>
+    <string name="text_view_hospedaje_premium">Hospedaje + Comida + Aseo - $25</string>
+    <string name="button_aceptar_hospedaje">Aceptar</string>
+    <string name="hair_tittle">Peluquería</string>
+    <string name="text_view_info_peluqueria">Nuestro servicio de salón de belleza ofrece a su perro nuestro mejor cuidado y atención.</string>
+    <string name="check_box_servicio_basico">Servicio Básico</string>
+    <string name="check_box_servicio_completo">Servicio Completo</string>
+    <string name="check_box_servicio_premium">Servicio Premium</string>
+    <string name="text_view_servicio_basico">Corte de Pelo - $9</string>
+    <string name="text_view_servicio_completo">Corte de Pelo + Accesorios - $13</string>
+    <string name="text_view_servicio_premium">Corte de Pelo + Accesorios + Pedicura - $16</string>
+    <string name="button_aceptar_peluqueria">Aceptar</string>
+    <string name="registry_pet_tittle">Registrar Mascota</string>
+    <string name="text_view_especie">Especie*</string>
+    <string name="radio_button_perro">Perro</string>
+    <string name="radio_button_gato">Gato</string>
+    <string name="edit_text_nombre_mascota">Nombre*</string>
+    <string name="edit_text_edad_mascota">Edad*</string>
+    <string name="text_view_vacuna">Vacunas al día*:</string>
+    <string name="check_box_vacuna"></string>
+    <string name="text_view_descripcion">Descripción de la mascota*:</string>
+    <string name="edit_text_descripcion"></string>
+    <string name="button_continuar_registro_mascota">Continuar</string>
+    <string name="user_data_tittle">Datos Usuario</string>
+    <string name="text_view_nombre_consulta">Nombre:</string>
+    <string name="text_view_apellido_consulta">Apellido:</string>
+    <string name="text_view_email_consulta">Correo electrónico:</string>
+    <string name="text_view_telefono_consulta">Teléfono:</string>
+    <string name="button_aceptar_consulta_datos_usuario">Aceptar</string>
+
+
 </resources>
+

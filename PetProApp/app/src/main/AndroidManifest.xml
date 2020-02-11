@@ -9,13 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UserDataActivity"></activity>
+        <activity android:name=".RegistryPetActivity" />
+        <activity android:name=".HairActivity" />
+        <activity android:name=".LodgingActivity" />
+        <activity android:name=".BathActivity" />
+        <activity android:name=".WalkActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".VerifyActivity" />
+        <activity android:name=".pagoEfectivoActivity" />
+        <activity android:name=".pagoTarjetaActivity" />
+        <activity android:name=".metodoPagoActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RegistryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

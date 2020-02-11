@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalkActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <Toolbar
+        android:id="@+id/toolbarVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walk_tittle"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText" />
+
+
+        </LinearLayout>
+    </Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageViewPaseo"
+            android:layout_width="0dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/take" />
+
+        <TextView
+            android:id="@+id/textViewInfoPaseo"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_info_paseo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPaseo" />
+
+        <CheckBox
+            android:id="@+id/checkBox30Minutos"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/check_box_30_minutos"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox1Hora"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoPaseo" />
+
+        <TextView
+            android:id="@+id/textViewPrecio30Minutos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_paseo_30_min"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox30Minutos"
+            app:layout_constraintStart_toStartOf="@+id/checkBox30Minutos"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox30Minutos" />
+
+        <CheckBox
+            android:id="@+id/checkBox1Hora"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/check_box_1_hora"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox30Minutos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBox30Minutos"
+            app:layout_constraintTop_toTopOf="@+id/checkBox30Minutos" />
+
+        <TextView
+            android:id="@+id/textViewPrecio1Hora"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_view_paseo_1_hora"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPrecio30Minutos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewPrecio30Minutos"
+            app:layout_constraintTop_toTopOf="@+id/textViewPrecio30Minutos" />
+
+        <CheckBox
+            android:id="@+id/checkBox1MediaHora"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/check_box_1_30_horas"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox2Horas"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrecio30Minutos" />
+
+        <TextView
+            android:id="@+id/textViewPrecio1MediaHora"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_paseo_media_hora"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/textView2Horas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1MediaHora" />
+
+        <CheckBox
+            android:id="@+id/checkBox2Horas"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/check_box_2_horas"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox1MediaHora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1MediaHora"
+            app:layout_constraintTop_toTopOf="@+id/checkBox1MediaHora" />
+
+        <TextView
+            android:id="@+id/textView2Horas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/text_view_paseo_2_horas"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPrecio1MediaHora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewPrecio1MediaHora"
+            app:layout_constraintTop_toTopOf="@+id/textViewPrecio1MediaHora" />
+
+        <Button
+            android:id="@+id/buttonAceptarPaseo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="onClickButtonPago4"
+            android:text="@string/button_aceptar_paseo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
