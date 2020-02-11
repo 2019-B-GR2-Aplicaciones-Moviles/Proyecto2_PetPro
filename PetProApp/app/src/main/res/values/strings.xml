@@ -68,7 +68,7 @@
     <string name="radio_button_gato">Gato</string>
     <string name="edit_text_nombre_mascota">Nombre*</string>
     <string name="edit_text_edad_mascota">Edad*</string>
-    <string name="text_view_vacuna">Vacunas al día*:</string>
+    <string name="text_view_vacuna">Vacunas al día:</string>
     <string name="check_box_vacuna"></string>
     <string name="text_view_descripcion">Descripción de la mascota*:</string>
     <string name="edit_text_descripcion"></string>
@@ -83,7 +83,7 @@
     <string name="text_view_escoger_metodo_pago">Escoja su método de pago::</string>
     <string name="button_tarjeta">Tarjeta</string>
     <string name="button_efectivo">Efectivo</string>
-    <string name="pago_efectivo_tittle">Pago en Efectivo</string>
+    <string name="resumen_pago_tittle">Resumen de pago</string>
     <string name="text_view_servicio_contratado">Servicio contratado:</string>
     <string name="text_view_valor_pagar">Valor a pagar:</string>
     <string name="button_aceptar_pago_efectivo">Aceptar</string>
@@ -95,7 +95,7 @@
     <string name="text_view_titular_tarjeta">Titular de la tarjeta:</string>
     <string name="edit_text_titular_tarjeta">Nombre tal y como aparece en la tarjeta</string>
     <string name="text_view_cvv">Código de Seguridad (CVV):</string>
-    <string name="edit_text_cvv"></string>
+    <string name="edit_text_cvv">Tres dígitos</string>
 
 
 
