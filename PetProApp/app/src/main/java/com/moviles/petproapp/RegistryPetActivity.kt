@@ -17,8 +17,8 @@ class RegistryPetActivity : AppCompatActivity() {
     private lateinit var edadMascota: EditText
     private lateinit var descripcionMascota: EditText
     private lateinit var radioGroupEspecie: RadioGroup
-    private lateinit var radioButtonEspecie: RadioButton
-    private var selectId: Int = 0
+    private lateinit var radioButtonPerro: RadioButton
+    private lateinit var radioButtonGato: RadioButton
     private lateinit var nombre: String
     private var edad: Int = 0
     private lateinit var descripcion: String
@@ -34,9 +34,13 @@ class RegistryPetActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
         radioGroupEspecie = findViewById(R.id.radioGroupEspecie)
-        selectId = radioGroupEspecie.checkedRadioButtonId
-        radioButtonEspecie = findViewById(selectId)
-        especie = radioButtonEspecie.text.toString()
+        radioButtonPerro = findViewById(R.id.radioButtonPerro)
+        radioButtonGato = findViewById(R.id.radioButtonGato)
+        if(radioButtonGato.isChecked){
+            especie = radioButtonGato.text.toString()
+        } else if (radioButtonPerro.isChecked){
+            especie = radioButtonPerro.text.toString()
+        }
         nombreMascota = findViewById(R.id.editTextNombreMascota)
         edadMascota = findViewById(R.id.editTextEdadMascota)
         descripcionMascota = findViewById(R.id.editTextDescripcionMascota)
