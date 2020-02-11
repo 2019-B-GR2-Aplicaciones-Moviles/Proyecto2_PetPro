@@ -81,7 +81,10 @@ class HomeActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documents ->
                 if (documents.isEmpty) {
-                    startActivity(Intent(this, RegistryPetActivity::class.java))
+                    val intentRegistryPet = Intent(this, RegistryPetActivity::class.java)
+                    intentRegistryPet.putExtra("id",idUser)
+                    startActivity(intentRegistryPet)
+
                 }
             }
     }

@@ -8,7 +8,7 @@
     android:background="@color/colorPrimary">
 
     <Toolbar
-        android:id="@+id/toolbarVerify"
+        android:id="@+id/toolbarPagoEfectivo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pago en efectivo"
+                android:text="@string/pago_efectivo_tittle"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorText" />
 
@@ -47,7 +47,7 @@
             android:textColor="@android:color/background_dark"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewServicioContrarto" />
 
         <EditText
             android:id="@+id/editTextTotal"
@@ -79,7 +79,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textViewServicioContrarto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -102,7 +102,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewServicioContrarto" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

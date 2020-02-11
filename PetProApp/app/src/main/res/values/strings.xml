@@ -79,7 +79,10 @@
     <string name="text_view_email_consulta">Correo electrónico:</string>
     <string name="text_view_telefono_consulta">Teléfono:</string>
     <string name="button_aceptar_consulta_datos_usuario">Aceptar</string>
-
-
+    <string name="metodo_pago_tittle">Método de Pago</string>
+    <string name="text_view_escoger_metodo_pago">Escoja su método de pago::</string>
+    <string name="button_tarjeta">Tarjeta</string>
+    <string name="button_efectivo">Efectivo</string>
+    <string name="pago_efectivo_tittle">Pago en Efectivo</string>
 </resources>
 
