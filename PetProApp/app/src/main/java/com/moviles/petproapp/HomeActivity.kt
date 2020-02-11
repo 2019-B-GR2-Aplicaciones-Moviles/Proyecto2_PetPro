@@ -47,6 +47,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonPeluqueria(view: View) {
         val prIntent = Intent(this, HairActivity::class.java)
+        prIntent.putExtra("id",id)
         startActivity(prIntent)
     }
 

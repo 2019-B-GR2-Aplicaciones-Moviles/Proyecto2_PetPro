@@ -18,12 +18,8 @@ class UserDataActivity : AppCompatActivity() {
     private lateinit var apellidoUsuario: TextView
     private lateinit var correoUsuario: TextView
     private lateinit var telefonoUsuario: TextView
-    private lateinit var nombre: String
-    private lateinit var apellido: String
-    private lateinit var email: String
-    private lateinit var telefono: String
     private lateinit var db: FirebaseFirestore
-    private lateinit var documento: String
+    private var id: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,15 +28,25 @@ class UserDataActivity : AppCompatActivity() {
 
 
         db = FirebaseFirestore.getInstance()
+        id = intent.getStringExtra("id")
 
+        nombreUsuario = findViewById(R.id.textViewNombreConsulta)
+        apellidoUsuario = findViewById(R.id.textViewApellidoConsulta)
+        correoUsuario = findViewById(R.id.textViewCorreoConsulta)
+        telefonoUsuario = findViewById(R.id.textViewTelefonoConsulta)
 
-
-        /*fun onClickButtonAceptarConsulta(view: View) {
-        val prIntent = Intent(this, LoginActivity::class.java)
-        startActivity(prIntent)
-    }*/
+        db.collection("usuarios").document(id)
+            .get()
+            .addOnSuccessListener { documentSnapshot ->
+                nombreUsuario.text = documentSnapshot.getString("nombre")
+                apellidoUsuario.text = documentSnapshot.getString("apellido")
+                correoUsuario.text = documentSnapshot.getString("email")
+                telefonoUsuario.text = documentSnapshot.getString("telefono")
+            }
     }
 
-
-
+    fun onClickButtonAceptarConsulta(view: View) {
+        val prIntent = Intent(this, HomeActivity::class.java)
+        startActivity(prIntent)
+    }
 }
