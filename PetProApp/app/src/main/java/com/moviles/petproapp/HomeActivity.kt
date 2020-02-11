@@ -27,7 +27,9 @@ class HomeActivity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { documentReference ->
                 for (document in documentReference) {
-                    id = document.id
+                    if(document.exists()){
+                        id = document.id
+                    }
                 }
             }
             .addOnFailureListener { e ->
