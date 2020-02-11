@@ -33,16 +33,17 @@ class RegistryPetActivity : AppCompatActivity() {
 
         db = FirebaseFirestore.getInstance()
         id = intent.getStringExtra("id")
+
         radioGroupEspecie = findViewById(R.id.radioGroupEspecie)
         radioButtonPerro = findViewById(R.id.radioButtonPerro)
         radioButtonGato = findViewById(R.id.radioButtonGato)
         nombreMascota = findViewById(R.id.editTextNombreMascota)
         edadMascota = findViewById(R.id.editTextEdadMascota)
         descripcionMascota = findViewById(R.id.editTextDescripcionMascota)
+
         checkBoxVacunaAlDia.setOnClickListener {
             vacuna = checkBoxVacunaAlDia.isChecked
         }
-
     }
 
     fun onClickButtonFinRegistroMascota(view: View) {
@@ -80,7 +81,6 @@ class RegistryPetActivity : AppCompatActivity() {
                 sendToFirestore(pet)
             }
         }
-
     }
 
     private fun sendToFirestore(pet: HashMap<String, Any>) {
