@@ -60,7 +60,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewBaño" />
 
-        <CheckBox
+
+        <RadioButton
             android:id="@+id/checkBoxBañoBasico"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -86,7 +87,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoBasico" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/checkBoxBañoCompleto"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -111,7 +112,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoCompleto" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/checkBoxBañoPremium"
             android:layout_width="0dp"
             android:layout_height="30dp"

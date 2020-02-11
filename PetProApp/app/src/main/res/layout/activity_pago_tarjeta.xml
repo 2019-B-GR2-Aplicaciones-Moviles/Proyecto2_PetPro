@@ -155,8 +155,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
             android:ems="10"
+            android:hint="@string/edit_text_cvv"
             android:inputType="textPersonName"
-            android:text="@string/text_view_cvv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCVV" />
