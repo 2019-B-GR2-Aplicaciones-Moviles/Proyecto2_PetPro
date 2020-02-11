@@ -21,6 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonService(view: View) {
         val intentService = Intent(this, ServicesActivity::class.java)
+        intentService.putExtra("id", id)
         startActivity(intentService)
     }
 
