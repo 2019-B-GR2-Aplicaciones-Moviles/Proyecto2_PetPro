@@ -55,7 +55,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
     fun onClickButtonRegistro(view: View) {
         val prIntent = Intent(this, RegistryActivity::class.java)
         startActivity(prIntent)
@@ -68,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
                     var user = auth.currentUser
                     if (user!!.isEmailVerified){
                         val intentHome = Intent(this,HomeActivity::class.java)
+                        intentHome.putExtra("user",usuario)
                         startActivity(intentHome)
                         finish()
                     }else{
