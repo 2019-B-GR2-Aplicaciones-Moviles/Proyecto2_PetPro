@@ -35,7 +35,16 @@ class UserDataActivity : AppCompatActivity() {
         correoUsuario = findViewById(R.id.editTextCorreoConsulta)
         telefonoUsuario = findViewById(R.id.editTextTelefonoConsulta)
 
-        db.collection("usuarios").document(id)
+        consultarDatos(id)
+    }
+
+    fun onClickButtonAceptarConsulta(view: View) {
+        val prIntent = Intent(this, HomeActivity::class.java)
+        startActivity(prIntent)
+    }
+
+    private fun consultarDatos(idUser: String){
+        db.collection("usuarios").document(idUser)
             .get()
             .addOnSuccessListener { documentSnapshot ->
                 nombreUsuario.text = documentSnapshot.getString("nombre")
@@ -43,10 +52,5 @@ class UserDataActivity : AppCompatActivity() {
                 correoUsuario.text = documentSnapshot.getString("email")
                 telefonoUsuario.text = documentSnapshot.getString("telefono")
             }
-    }
-
-    fun onClickButtonAceptarConsulta(view: View) {
-        val prIntent = Intent(this, HomeActivity::class.java)
-        startActivity(prIntent)
     }
 }
