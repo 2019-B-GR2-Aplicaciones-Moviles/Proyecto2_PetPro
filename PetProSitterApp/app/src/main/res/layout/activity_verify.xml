@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerifyActivity">
+    tools:context=".VerifyActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Toolbar
+        android:id="@+id/toolbarVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_tittle"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/background_dark" />
+
+
+        </LinearLayout>
+    </Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewMensajeConf"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/text_view_mensaje_confirmacion"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewMensajeConf"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewMensajeConf"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMensajeConf" />
+
+        <TextView
+            android:id="@+id/textViewMensajeConf2"
+            android:layout_width="0dp"
+            android:layout_height="107dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/text_view_mensaje_confirmacion2"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+        <Button
+            android:id="@+id/buttonFinRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="84dp"
+            android:onClick="onClickButtonFinRegistro"
+            android:text="@string/button_fin_registro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewMensajeConf2"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/textViewMensajeConf2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
