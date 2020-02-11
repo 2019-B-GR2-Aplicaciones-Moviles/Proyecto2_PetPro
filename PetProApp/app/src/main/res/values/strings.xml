@@ -83,7 +83,7 @@
     <string name="text_view_escoger_metodo_pago">Escoja su método de pago::</string>
     <string name="button_tarjeta">Tarjeta</string>
     <string name="button_efectivo">Efectivo</string>
-    <string name="pago_efectivo_tittle">Pago en Efectivo</string>
+    <string name="resumen_pago_tittle">Resumen de pago</string>
     <string name="text_view_servicio_contratado">Servicio contratado:</string>
     <string name="text_view_valor_pagar">Valor a pagar:</string>
     <string name="button_aceptar_pago_efectivo">Aceptar</string>
