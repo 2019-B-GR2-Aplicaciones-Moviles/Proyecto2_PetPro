@@ -26,7 +26,6 @@ class HomeActivity : AppCompatActivity() {
         consultarMascotas(id)
     }
 
-
     //Conjunto de funciones las cuales responden a los principales servicios
 
     fun onClickButtonPaseo(view: View) {
@@ -52,31 +51,32 @@ class HomeActivity : AppCompatActivity() {
 
     fun onClickButtonPerfilUser(view: View) {
         val prIntent = Intent(this, UserDataActivity::class.java)
-        prIntent.putExtra("id",id)
+        prIntent.putExtra("id", id)
         startActivity(prIntent)
     }
 
     fun onClickButtonRegistryCard(view: View) {
         val prIntent = Intent(this, pagoTarjetaActivity::class.java)
-        prIntent.putExtra("id",id)
+        prIntent.putExtra("id", id)
         startActivity(prIntent)
     }
 
     fun onClickButtonRegistryPet(view: View) {
         val prIntent = Intent(this, RegistryPetActivity::class.java)
-        prIntent.putExtra("id",id)
+        prIntent.putExtra("id", id)
         startActivity(prIntent)
     }
 
-    private fun consultarMascotas(idUser:String){
+    private fun consultarMascotas(idUser: String) {
         db.collection("usuarios").document(idUser).collection("mascotas")
             .get()
             .addOnSuccessListener { documents ->
-                if (documents.isEmpty) {
-                    val intentRegistryPet = Intent(this, RegistryPetActivity::class.java)
-                    intentRegistryPet.putExtra("id",idUser)
-                    startActivity(intentRegistryPet)
-
+                for (document in documents){
+                    if(!document.exists()){
+                        val intentRegistryPet = Intent(this, RegistryPetActivity::class.java)
+                        intentRegistryPet.putExtra("id", idUser)
+                        startActivity(intentRegistryPet)
+                    }
                 }
             }
     }
