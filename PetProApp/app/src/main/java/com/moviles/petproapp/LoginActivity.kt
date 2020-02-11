@@ -3,11 +3,14 @@ package com.moviles.petproapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
@@ -16,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var usuario: String
     private lateinit var password: String
     private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
     fun onClickButtonRegistro(view: View) {
         val prIntent = Intent(this, RegistryActivity::class.java)
         startActivity(prIntent)
@@ -64,6 +69,7 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intentHome)
                         finish()
                     }else{
+                        
                         Toast.makeText(this, "Verificar su cuenta para poder iniciar sesion", Toast.LENGTH_LONG).show()
                     }
                 }else{

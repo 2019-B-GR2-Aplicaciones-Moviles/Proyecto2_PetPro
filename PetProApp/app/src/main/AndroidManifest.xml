@@ -17,6 +17,9 @@
         <activity android:name=".WalkActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".VerifyActivity" />
+        <activity android:name=".pagoEfectivoActivity" />
+        <activity android:name=".pagoTarjetaActivity" />
+        <activity android:name=".metodoPagoActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

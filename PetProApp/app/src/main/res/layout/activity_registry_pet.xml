@@ -161,7 +161,6 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:phoneNumber="false"
             android:text="@string/edit_text_descripcion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -169,16 +168,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewDescripcion" />
 
         <Button
-            android:id="@+id/buttonAceptarRegistro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/buttonAceptarRegistroMascota"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
+            android:onClick="onClickButtonFinRegistroMascota"
             android:text="@string/button_continuar_registro_mascota"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

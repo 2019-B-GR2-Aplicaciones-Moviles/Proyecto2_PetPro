@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_user_data.view.*
 
 class UserDataActivity : AppCompatActivity() {
 
-   /* private lateinit var nombreUsuario: TextView
+    private lateinit var nombreUsuario: TextView
     private lateinit var apellidoUsuario: TextView
     private lateinit var correoUsuario: TextView
     private lateinit var telefonoUsuario: TextView
@@ -22,57 +22,25 @@ class UserDataActivity : AppCompatActivity() {
     private lateinit var apellido: String
     private lateinit var email: String
     private lateinit var telefono: String
-    private lateinit var db: FirebaseFirestore*/
+    private lateinit var db: FirebaseFirestore
+    private lateinit var documento: String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_data)
 
 
-        //db = FirebaseFirestore.getInstance()
-
-        /*nombre = intent.extras?.getString("nombre").toString()
-        apellido = intent.extras?.getString("apellido").toString()
-        email = intent.extras?.getString("email").toString()
-        telefono = intent.extras?.getString("telefono").toString()
+        db = FirebaseFirestore.getInstance()
 
 
-        this.nombreUsuario.text = nombre
-        apellidoUsuario.text = apellido
-        this.correoUsuario.text = email
-        telefonoUsuario.text = telefono*/
-
-
-/*
-        db.collection("usuarios")
-            .get()
-            .addOnSuccessListener { result ->
-
-
-                    nombreUsuario = findViewById(R.id.editTextNombreConsulta)
-                    apellidoUsuario = findViewById(R.id.editTextApellidoConsulta)
-                    correoUsuario = findViewById(R.id.editTextCorreoConsulta)
-                    telefonoUsuario = findViewById(R.id.editTextTelefonoConsulta)
-
-                    nombre = intent.extras?.getString("nombre").toString()
-                    apellido = intent.extras?.getString("apellido").toString()
-                    email = intent.extras?.getString("email").toString()
-                    telefono = intent.extras?.getString("telefono").toString()
-
-
-                    this.nombreUsuario.text = nombre
-                    apellidoUsuario.text = apellido
-                    this.correoUsuario.text = email
-                    telefonoUsuario.text = telefono
-                }
-            }*/
-        /*  .addOnFailureListener { exception ->
-                Toast.makeText(this, "Error durante registro", Toast.LENGTH_LONG).show()
-            }*/
 
         /*fun onClickButtonAceptarConsulta(view: View) {
         val prIntent = Intent(this, LoginActivity::class.java)
         startActivity(prIntent)
     }*/
     }
+
+
+
 }

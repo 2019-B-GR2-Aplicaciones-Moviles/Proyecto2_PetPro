@@ -23,7 +23,7 @@ class VerifyActivity : AppCompatActivity() {
     }
 
     fun onClickButtonFinRegistro(view: View) {
-        val prIntent = Intent(this, LoginActivity::class.java)
+        val prIntent = Intent(this, RegistryPetActivity::class.java)
         startActivity(prIntent)
     }
 }

@@ -81,7 +81,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCorreoConsulta" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextNombreConsulta"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -92,7 +92,7 @@
             app:layout_constraintStart_toEndOf="@+id/textViewNombreConsulta"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextApellidoConsulta"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -103,7 +103,7 @@
             app:layout_constraintStart_toEndOf="@+id/textViewApellidoConsulta"
             app:layout_constraintTop_toBottomOf="@+id/editTextNombreConsulta" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextCorreoConsulta"
             android:layout_width="0dp"
             android:layout_height="30dp"
@@ -115,7 +115,7 @@
             app:layout_constraintStart_toEndOf="@+id/textViewApellidoConsulta"
             app:layout_constraintTop_toBottomOf="@+id/editTextApellidoConsulta" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTelefonoConsulta"
             android:layout_width="0dp"
             android:layout_height="30dp"
