@@ -50,7 +50,6 @@ class LoginActivity : AppCompatActivity() {
                 passwordUsuario.error = "La contraseña debe tener al menos 8 caracteres"
             }
             else -> {
-                consultarIDUsuario()
                 loginUser()
             }
         }
@@ -67,6 +66,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful){
                     var user = auth.currentUser
                     if (user!!.isEmailVerified){
+                        consultarIDUsuario()
                         val intentHome = Intent(this,HomeActivity::class.java)
                         intentHome.putExtra("id",id)
                         startActivity(intentHome)
