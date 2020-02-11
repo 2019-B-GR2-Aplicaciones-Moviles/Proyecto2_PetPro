@@ -11,14 +11,13 @@ class VerifyActivity : AppCompatActivity() {
     private lateinit var correo: TextView
     private lateinit var email: String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify)
 
         correo = findViewById(R.id.textViewEmail)
-        email= intent.extras?.getString("email").toString()
-        correo.text=email
+        email = intent.extras?.getString("email").toString()
+        correo.text = email
 
     }
 
