@@ -84,4 +84,5 @@
     <string name="text_view_perfil_sitter">Perfil</string>
     <string name="services_sitter_tittle">Servicios</string>
     <string name="profile_sitter_tittle">Menú Principal</string>
+    <string name="text_view_bank_account">Cuenta de Banco:</string>
 </resources>

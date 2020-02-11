@@ -14,7 +14,6 @@ class HomeActivity : AppCompatActivity() {
 
     private var id: String = ""
     private lateinit var db: FirebaseFirestore
-    private lateinit var correo: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

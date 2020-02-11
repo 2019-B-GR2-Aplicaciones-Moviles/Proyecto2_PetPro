@@ -37,6 +37,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/buttonPerfilSitter"
+            android:layout_width="155dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="140dp"
+            android:background="@drawable/user4"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:onClick="onClickButtonProfile"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPerfilSitter"
+            app:layout_constraintVertical_bias="0.564" />
+
         <TextView
             android:id="@+id/textViewServiciosSitter"
             android:layout_width="0dp"
@@ -48,6 +64,7 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonServicios"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +78,7 @@
             android:background="@drawable/serviciossitter"
             android:onClick="onClickButtonService"
             android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/textViewPerfilSitter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewServiciosSitter" />
@@ -70,32 +88,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="67dp"
+            android:layout_marginTop="110dp"
             android:layout_marginEnd="32dp"
             android:text="@string/text_view_perfil_sitter"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonPerfilSitter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonServicios" />
-
-        <Button
-            android:id="@+id/buttonPerfilSitter"
-            android:layout_width="155dp"
-            android:layout_height="142dp"
-            android:layout_marginTop="160dp"
-            android:layout_marginBottom="140dp"
-            android:background="@drawable/user4"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:onClick="onClickButtonProfile"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonServicios"
-            app:layout_constraintVertical_bias="0.564" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
