@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/registry_tittle"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+                android:textColor="@color/colorText" />
         </LinearLayout>
 
 
@@ -42,12 +42,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_view_campos_obligatorios"
-            android:textColor="?attr/colorError"
+            android:textColor="@color/colorAccent"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/editTextNombreReg"
             app:layout_constraintStart_toStartOf="@+id/editTextNombreReg"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.609" />
+            app:layout_constraintVertical_bias="0.136" />
 
         <EditText
             android:id="@+id/editTextNombreReg"
@@ -58,10 +58,10 @@
             android:ems="10"
             android:hint="@string/edit_text_nombre"
             android:inputType="textPersonName"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toTopOf="@+id/editTextApellidoReg"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCampoRequerido" />
 
@@ -72,10 +72,10 @@
             android:ems="10"
             android:hint="@string/edit_text_apellido"
             android:inputType="textPersonName"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toTopOf="@+id/editTextEmailReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextNombreReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextNombreReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextNombreReg" />
 
@@ -86,10 +86,10 @@
             android:ems="10"
             android:hint="@string/edit_text_email"
             android:inputType="textEmailAddress"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toTopOf="@+id/editTextPhoneReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextApellidoReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextApellidoReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextApellidoReg" />
 
@@ -100,10 +100,10 @@
             android:ems="10"
             android:hint="@string/edit_text_telefono"
             android:inputType="phone"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toTopOf="@+id/editTextPwReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmailReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextEmailReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
 
@@ -114,10 +114,10 @@
             android:ems="10"
             android:hint="@string/edit_text_contraseña"
             android:inputType="textPassword"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toTopOf="@+id/editTextConfirmaPwReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextPhoneReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPhoneReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhoneReg" />
 
@@ -128,28 +128,42 @@
             android:ems="10"
             android:hint="@string/edit_text_confirmaPw"
             android:inputType="textPassword"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toTopOf="@+id/buttonAceptarRegistro"
+            android:textColor="@color/colorText"
+            app:layout_constraintBottom_toTopOf="@+id/editTextBankAccount"
             app:layout_constraintEnd_toEndOf="@+id/editTextPwReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPwReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextPwReg" />
+
+        <EditText
+            android:id="@+id/editTextBankAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/edit_text_bank_account"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorText"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAceptarRegistro"
+            app:layout_constraintEnd_toEndOf="@+id/editTextConfirmaPwReg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextConfirmaPwReg"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmaPwReg" />
 
         <Button
             android:id="@+id/buttonAceptarRegistro"
             android:layout_width="122dp"
             android:layout_height="47dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:background="@color/colorPrimaryDark"
             android:onClick="onClickRegistrarUsuario"
             android:text="@string/button_continuarReg"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/colorText"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextConfirmaPwReg"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="@+id/editTextConfirmaPwReg"
-            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmaPwReg" />
+            app:layout_constraintEnd_toEndOf="@+id/editTextBankAccount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextBankAccount"
+            app:layout_constraintTop_toBottomOf="@+id/editTextBankAccount" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
