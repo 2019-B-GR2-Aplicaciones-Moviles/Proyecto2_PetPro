@@ -17,12 +17,12 @@ class RegistryPetActivity : AppCompatActivity() {
     private lateinit var edadMascota: EditText
     private lateinit var descripcionMascota: EditText
     private lateinit var radioGroupEspecie: RadioGroup
-    private var radioButtonEspecie: RadioButton = TODO()
+    private lateinit var radioButtonEspecie: RadioButton
     private var selectId: Int = 0
     private lateinit var nombre: String
     private var edad: Int = 0
     private lateinit var descripcion: String
-    private lateinit var especie: String
+    private var especie: String = ""
     private var vacuna: Boolean = false
     private var id: String = ""
     private lateinit var db: FirebaseFirestore
