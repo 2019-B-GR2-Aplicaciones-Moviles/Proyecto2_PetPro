@@ -22,7 +22,7 @@ class RegistryPetActivity : AppCompatActivity() {
     private lateinit var nombre: String
     private var edad: Int = 0
     private lateinit var descripcion: String
-    private var especie: String = ""
+    private lateinit var especie: String
     private var vacuna: Boolean = false
     private var id: String = ""
     private lateinit var db: FirebaseFirestore
